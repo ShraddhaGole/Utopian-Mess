@@ -1,0 +1,37 @@
+
+<table class="table table-striped table-primary">
+        <thead>
+          <tr>
+            <th>Mess id</th>
+            <th>Breakfast</th>
+            <th>Lunch</th>
+            <th>Snacks</th>
+            <th>Dinner</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%if (data[0].length >0){ %>
+          <% data[0].forEach(function(row){ %>
+          <tr>
+            <td><%= row.mess_id %></td>
+            <td><%= row.breakfast%></td>
+            <td><%= row.lunch%></td>
+            <td><%= row.snacks%></td>
+            <td><%= row.dinner%></td>
+          </tr>
+          <% })}else{ %>
+            <tr>
+                <td colspan="6">Not updated yet!</td>
+                
+              </tr>
+            <% } %>
+        </tbody>
+      </table>
+
+<p>Total Mess Strength: <%=data[1] %></p>
+<br><p>details</p>
+<br>
+<p>helpline nos: +91 7894582613, +91 7418529637</p>
+ <%- include ('footer') %>
+
+
